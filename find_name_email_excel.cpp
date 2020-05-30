@@ -28,6 +28,7 @@ int32_t main(){
     while(total_email_name--){
          string email;
          cin>>email;
+         transform(email.begin(),email.end(),email.begin(),::tolower);
          cin.ignore();
          string name;
          getline(cin,name);
@@ -43,6 +44,7 @@ int32_t main(){
     while(extract--){
         string email;
         cin>>email;
+        transform(email.begin(),email.end(),email.begin(),::tolower);
         if(virus.find(email) == virus.end())
             email_not_found<<email<<endl;
         else    
