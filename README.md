@@ -10,6 +10,7 @@ Extracting respective names of emails from excel sheet
     What I just simply did I used HashMap to store Email as key and their Name as Values.
     
     In the code the variable total_email_name takes the total pairs of Email and Names, and the extract variable is for the number of    email,s name you want to find:
+    You just need to paste the email and names in the format [email] and its respective [names]
           Input:
               total_emal_name
               [email] [name]
