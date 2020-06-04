@@ -8,7 +8,7 @@ using namespace std;
 //#include <boost/multiprecision/cpp_int.hpp>
 //namespace mp = boost::multiprecision;
 //#define ln mp::cpp_int;
-#define ll long long
+#define ll long long int
 #define ld double
 #define endl "\n"
 
@@ -22,13 +22,15 @@ int32_t main(){
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif */
-    unordered_map<string,string> virus;   
+    unordered_map<string,pair<string,ll>> virus;   
     ll total_email_name;
     cin>>total_email_name;
     while(total_email_name--){
          string email;
          cin>>email;
          transform(email.begin(),email.end(),email.begin(),::tolower);
+         ll pno;
+         cin>>pno;
          cin.ignore();
          string name;
          getline(cin,name);
@@ -37,8 +39,8 @@ int32_t main(){
         //your code goes here
     }
     ofstream email_found,email_not_found;
-    email_found.open("email_found.txt");  //the output will be stored in this file
-    email_not_found.open("email_not_found.txt");
+    email_found.open("email_found.csv");  //the output will be stored in this file
+    email_not_found.open("email_not_found.csv");
     ll extract;
     cin>>extract;
     while(extract--){
@@ -48,9 +50,10 @@ int32_t main(){
         if(virus.find(email) == virus.end())
             email_not_found<<email<<endl;
         else    
-            email_found<<virus[email]<<"           "<<email<<endl;
+            email_found<<virus[email].first<<","<<email<<","<<virus[email].second<<endl; //commas used to store in .csv format
     }
-
+    email_found.close();
+    email_not_found.close();
     //cerr<<"Time Elapsed: "<<clock()/(double)CLOCKS_PER_SEC<<endl;
     return 0;
 }
