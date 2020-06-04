@@ -1,8 +1,7 @@
 # find_name_email_excel
 Extracting respective names of emails from excel sheet
 
-Motivaton:
-
+        Motivaton:
         This is just a practical application of HashMap as we know searching, inserting, deleting takes theta(1) time.
         This can be used for many purposes, I designed it because, my Student Club organised an event where more 
         than 900+ participants took part and at the final we have only 346 were eligible for certification.
