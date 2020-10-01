@@ -1,16 +1,16 @@
 # find_name_email_excel
-Extracting respective names of emails from excel sheet
+Extracting corresponding names of emails from excel sheet
 
         Motivaton:
-        This is just a practical application of HashMap as we know searching, inserting, deleting takes theta(1) time.
+        This is just a practical application of HashMap. As we know searching, inserting, deleting takes θ(1) time.
         This can be used for many purposes, I designed it because, my Student Club organised an event where more 
-        than 900+ participants took part and at the final we have only 346 were eligible for certification.
+        than 900+ participants took part and at the final we have only 346 participants who were eligible for certification.
         And at the end we end up with having eligible student's Email addresses.
         But we required names respective to the Email address for auto generating certification script.
 
     What I just simply did I used HashMap to store Email as key and their Name and phone number as Values in form of pair.
     
-    In the code the variable total_email_name takes the total pairs of Email ,Names, and phone numbers the extract variable is for the number of    email's name you want to find:
+    In the code the variable total_email_name takes the total pairs of Email ,Names, and phone numbers the extract variable is for the number of email's name you want to find:
     You just need to paste the email and names in the format [email] and its respective [names]
           Input:
               total_emal_name
