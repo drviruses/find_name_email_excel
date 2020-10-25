@@ -65,7 +65,8 @@ int32_t main(){
          string name;
          getline(cin,name);
          fflush(stdin);
-         virus[email] = name;
+         pair<string,ll> str = make_pair(name,pno);
+         virus[email] = str;
         //your code goes here
     }
     ofstream email_found,email_not_found;
